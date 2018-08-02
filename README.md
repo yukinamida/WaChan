@@ -1,2 +1,2 @@
 # WaChan
-some discordgo bot thing 
+some bot thing 
