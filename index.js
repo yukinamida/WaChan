@@ -25,7 +25,7 @@ for (const file of commandFiles) {
 
 // Runs on bot login/reconnect
 WaChan.on('ready', () => {
-	console.log('Ready!');
+	console.log('${client.user.tag} has started successfully!');
 });
 
 // ===== Message Handling =====
@@ -49,7 +49,7 @@ WaChan.on('message', message => {
 
 	// Check if arguments have been provided
 	if (command.args && !args.length) {
-		const reply = `You didn't provide any arguments, ${message.author}!`;
+		const reply = `No arguments have been provided, ${message.author}!`;
 
 		return message.channel.send(reply);
 	}
@@ -64,6 +64,17 @@ WaChan.on('message', message => {
 		message.reply('there was an error trying to execute that command!');
 	}
 
+});
+
+// ===== OnGuildMemberAdd =====
+
+WaChan.on('guildMemberAdd', member => {
+	// Send the message to a specific channel on the server:
+	const channel = member.guild.channels.find(ch => ch.name === 'general');
+	// Do nothing if the channel wasn't found
+	if (!channel) return;
+	// Send the message, mentioning the new member
+	channel.send(`Welcome to the server, ${member}`);
 });
 
 
