@@ -25,7 +25,8 @@ for (const file of commandFiles) {
 
 // Runs on bot login/reconnect
 WaChan.on('ready', () => {
-	console.log('${client.user.tag} has started successfully!');
+	console.log(`${WaChan.user.tag} has started successfully!`);
+	WaChan.user.setActivity('with discord.js');
 });
 
 // ===== Message Handling =====
