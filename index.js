@@ -92,7 +92,7 @@ WaChan.on('guildCreate', guild => {
 WaChan.on('guildDelete', guild => {
 	// Runs when the bot is removed from a guild.
 	console.log(`Removed from: ${guild.name} (id: ${guild.id})`);
-	WaChan.user.setActivity(`Serving ${WaChan.guilds.size} servers`);
+
 });
 
 
