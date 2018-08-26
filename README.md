@@ -4,7 +4,7 @@
 
 eat my food shikikan!!
 
-Sample Discord.js implementation for demonstration
+Sample [Discord.js](https://discord.js.org/) Bot for demonstration
 
 ## Features
 
@@ -14,18 +14,26 @@ Sample Discord.js implementation for demonstration
 
 ## Setup
 
-Node.js stuff
-
 ``` npm packages
-npm install discord.js
-npm install discord.js node-opus
-npm install discord.js opusscript
-npm install ffmpeg-binaries
-npm install ytdl-core
+npm install 
 ```
 
-Rename the sample config file or create your own
+##### Rename the sample config file or create your own
 
 ``` file setup
 config.json
+```
+
+##### Edit the config 
+
+##### Set your token ([can be obtained here](https://discordapp.com/developers/applications/))
+
+```json
+  "token" : "token here",
+```
+
+##### Set your prefix 
+
+``` json
+  "prefix" : "!"
 ```
