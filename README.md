@@ -16,3 +16,9 @@ npm install ffmpeg-binaries
 npm install ytdl-core
 
 ```
+
+- Rename the sample config file or create your own
+
+```
+config.json
+```
